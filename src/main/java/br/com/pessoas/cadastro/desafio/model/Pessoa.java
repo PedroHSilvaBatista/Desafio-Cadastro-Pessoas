@@ -1,13 +1,19 @@
 package br.com.pessoas.cadastro.desafio.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "pessoas")
 @Getter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,8 +34,4 @@ public class Pessoa {
 
     @Column(length = 7)
     private String login;
-
-    public Pessoa() {
-
-    }
 }

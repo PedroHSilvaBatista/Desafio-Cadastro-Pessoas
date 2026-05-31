@@ -1,11 +1,13 @@
 package br.com.pessoas.cadastro.desafio.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "pessoas")
+@Getter
 public class Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

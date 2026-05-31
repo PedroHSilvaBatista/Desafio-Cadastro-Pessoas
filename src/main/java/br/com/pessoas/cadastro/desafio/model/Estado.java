@@ -1,5 +1,8 @@
 package br.com.pessoas.cadastro.desafio.model;
 
+import lombok.Getter;
+
+@Getter
 public enum Estado {
     AC("Acre"),
     AL("Alagoas"),
@@ -33,9 +36,5 @@ public enum Estado {
 
     Estado(String nomeCompleto) {
         this.nomeCompleto = nomeCompleto;
-    }
-
-    public String getNomeCompleto() {
-        return nomeCompleto;
     }
 }

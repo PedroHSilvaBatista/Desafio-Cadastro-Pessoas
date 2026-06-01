@@ -1,10 +1,7 @@
 package br.com.pessoas.cadastro.desafio.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 
@@ -33,5 +30,6 @@ public class Pessoa {
     private Estado estado;
 
     @Column(length = 7)
+    @Setter
     private String login;
 }

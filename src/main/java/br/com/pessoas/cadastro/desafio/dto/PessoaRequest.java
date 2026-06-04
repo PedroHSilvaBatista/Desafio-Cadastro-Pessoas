@@ -8,7 +8,7 @@ import java.time.LocalDate;
 public record PessoaRequest(@NotBlank(message = "O campo 'nome' precisa ser preenchido") String nomeCompleto,
                             @NotBlank(message = "O campo 'CPF' precisa ser preenchido") @Size(min = 14, max = 14, message = "CPF deve estar no formato 123.456.789-09") String documentoCpf,
                             @NotBlank(message = "O campo 'email' precisa ser preenchido") @Email String email,
-                            @NotNull(message = "O campo 'dataNascimento' precisa ser preenchido") LocalDate dataNascimento,
+                            @NotNull(message = "O campo 'dataNascimento' precisa ser preenchido") @PastOrPresent(message = "A data de nascimento não pode ser futura") LocalDate dataNascimento,
                             @NotBlank(message = "O campo 'cep' precisa ser preenchido") @Pattern(regexp = "\\d{5}-\\d{3}", message = "CEP deve estar no formato 00000-000") String cep,
                             @NotBlank(message = "O campo 'logradouro' precisa ser preenchido") String logradouro,
                             String complemento,

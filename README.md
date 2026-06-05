@@ -37,10 +37,10 @@ Ou baixe o `.zip` pelo GitHub e extraia na pasta de sua preferência.
 
 ### 2. Banco de Dados
 
-Crie um banco de dados no PostgreSQL:
+Crie um banco de dados no PostgreSQL com o nome de sua preferência:
 
 ```sql
-CREATE DATABASE cadastro_pessoas;
+CREATE DATABASE nome_do_banco;
 ```
 
 ### 3. Variáveis de Ambiente
@@ -49,10 +49,12 @@ Configure as seguintes variáveis de ambiente no seu sistema ou IDE:
 
 | Variável | Descrição | Exemplo |
 |----------|-----------|---------|
-| `DB_POSTGRESQL_HOST` | Host e porta do banco | `localhost:5432` |
-| `DB_POSTGRESQL_NAME` | Nome do banco | `cadastro_pessoas` |
+| `DB_POSTGRESQL_HOST` | Host do banco | `localhost` |
+| `DB_POSTGRESQL_NAME` | Nome do banco criado no PostgreSQL | `nome_do_banco` |
 | `DB_POSTGRESQL_USERNAME` | Usuário do banco | `postgres` |
 | `DB_POSTGRESQL_PASSWORD` | Senha do banco | `sua_senha` |
+
+> **Observação:** a porta não é especificada pois a aplicação utiliza a porta padrão do PostgreSQL (`5432`). Caso seu PostgreSQL esteja em outra porta, adicione-a ao valor de `DB_POSTGRESQL_HOST`. Exemplo: `localhost:5433`.
 
 **No IntelliJ IDEA:** acesse `Run > Edit Configurations > Environment Variables` e adicione as variáveis acima.
 
